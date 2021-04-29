@@ -1,0 +1,30 @@
+<html lang="en">
+    <head charset="utf-8">
+        <title>CHECK-IN</title>
+        <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+            <div class="only">
+            <form action="/boobsie" method="post">
+            <button type="submit" class="btn btn-info btn-lg">CHECK IN</button>
+            </form>
+            ..................................................
+            <form action="/bumsie" method="post">
+            <button type="submit" class="btn btn-primary btn-lg">CHECK IN</button>
+            </form>
+            </div>
+            <div class="textdata">
+            <br>
+            {{#if tapped}}
+            <table>
+                {{#each tapped}}
+                <tr>
+                    <td>{{this}}</td>
+                </tr>
+                {{/each}}
+            </table>
+            {{/if}}
+            </div>
+            <script src="/assets/js/bootstrap.js"></script>
+    </body>
+</html>
