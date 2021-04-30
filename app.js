@@ -16,7 +16,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/assets", express.static(__dirname + "/public"));
 
 app.get("/",(req,res) => {
-  var outar=tapme.reverse();
+  
+  var outar=tapme.map((x) => x);
+  outar.reverse();
   res.render("page",{
     tapped: outar,
   });
